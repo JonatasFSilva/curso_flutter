@@ -25,6 +25,7 @@ void main(List<String> args) {
   var conjunto = {0, 1, 2, 3, 4, 4, 4, 5}; // nao aceita elementos repetidos
   print(conjunto.length);
   print(conjunto);
+  // ignore: unnecessary_type_check
   print(conjunto is Set);
 
   // conjuto tipado
@@ -60,7 +61,9 @@ void main(List<String> args) {
 
   //final -- valor nao sera alterado depois de setado
   final d = 3;
+  print(d);
 
   //contantes
   const e = 4; //-- valor nao sera alterado depois de setado
+  print(e);
 }
