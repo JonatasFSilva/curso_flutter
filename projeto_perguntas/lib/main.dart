@@ -5,8 +5,11 @@ void main(List<String> args) {
 }
 
 class PerguntaApp extends StatelessWidget {
+  var perguntaSelecionada = 0;
+
   void responder() {
-    print("Pergunta Respondida!!!");
+    perguntaSelecionada++; // incremento
+    print(perguntaSelecionada);
   }
 
   @override
@@ -22,16 +25,13 @@ class PerguntaApp extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            Text(perguntas.elementAt(0)),
+            Text(perguntas[perguntaSelecionada]),
             ElevatedButton(
-                onPressed: responder, 
-                child: const Text("Resposta 1")),
+                onPressed: responder, child: const Text("Resposta 1")),
             ElevatedButton(
-                onPressed: responder, 
-                child: const Text("Resposta 2")),
+                onPressed: responder, child: const Text("Resposta 2")),
             ElevatedButton(
-                onPressed: responder, 
-                child: const Text("Resposta 3")),
+                onPressed: responder, child: const Text("Resposta 3")),
           ],
         ),
       ),
