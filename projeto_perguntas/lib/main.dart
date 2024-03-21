@@ -5,6 +5,10 @@ void main(List<String> args) {
 }
 
 class PerguntaApp extends StatelessWidget {
+  void responder() {
+    print("Pergunta Respondida!!!");
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<String> perguntas = [
@@ -14,14 +18,20 @@ class PerguntaApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Perguntas"),
+          title: const Text("Perguntas"),
         ),
         body: Column(
           children: <Widget>[
             Text(perguntas.elementAt(0)),
-            ElevatedButton(onPressed: null, child: Text("Resposta 1")),
-            ElevatedButton(onPressed: null, child: Text("Resposta 2")),
-            ElevatedButton(onPressed: null, child: Text("Resposta 3")),
+            ElevatedButton(
+                onPressed: responder, 
+                child: const Text("Resposta 1")),
+            ElevatedButton(
+                onPressed: responder, 
+                child: const Text("Resposta 2")),
+            ElevatedButton(
+                onPressed: responder, 
+                child: const Text("Resposta 3")),
           ],
         ),
       ),
