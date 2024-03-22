@@ -4,11 +4,14 @@ void main(List<String> args) {
   runApp(PerguntaApp());
 }
 
-class PerguntaApp extends StatelessWidget {
+class PerguntaAppState extends State<PerguntaApp> {
   var perguntaSelecionada = 0;
 
   void responder() {
-    perguntaSelecionada++; // incremento
+    
+    setState(() {
+    perguntaSelecionada++; // incremento      
+    });
     print(perguntaSelecionada);
   }
 
@@ -36,5 +39,11 @@ class PerguntaApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class PerguntaApp extends StatefulWidget {
+  PerguntaAppState createState() {
+    return PerguntaAppState();
   }
 }
