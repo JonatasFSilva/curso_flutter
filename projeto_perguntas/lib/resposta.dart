@@ -8,14 +8,13 @@ class Resposta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
+    return SizedBox(      
+      width: double.infinity,      
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue, 
-            foregroundColor: Colors.white),
+            backgroundColor: Colors.blue, foregroundColor: Colors.white),
         onPressed: quandoSelecionado,
-        child: const Text("Resposta 1"),
+        child: Text(texto),
       ),
     );
   }
