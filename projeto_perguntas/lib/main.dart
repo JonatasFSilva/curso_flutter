@@ -12,15 +12,30 @@ class _PerguntaAppState extends State<PerguntaApp> {
   final List<Map<String, Object>> _perguntas = const [
     {
       "texto": "Qual é a sua cor favorita?",
-      "respostas": ["Preto", "Vermelho", "Verde", "Branco"],
+      "respostas": [
+        {"texto": "Preto", "nota": 10},
+        {"texto": "Vermelho", "nota": 5},
+        {"texto": "Verde", "nota": 3},
+        {"texto": "Branco", "nota": 1},
+      ],
     },
     {
       "texto": "Qual é o seu animal favorito?",
-      "respostas": ["Coelho", "Cobra", "Elefante", "Leao"],
+      "respostas": [
+        {"texto": "Coelho", "nota": 10},
+        {"texto": "Cobra", "nota": 5},
+        {"texto": "Elefante", "nota": 3},
+        {"texto": "Leao", "nota": 1},
+      ],
     },
     {
       "texto": "Qual é o seu instrutor favorito?",
-      "respostas": ["Maria", "Joao", "Leo", "Predo"],
+      "respostas": [
+        {"texto": "Maria", "nota": 10},
+        {"texto": "Joao", "nota": 5},
+        {"texto": "Leo", "nota": 3},
+        {"texto": "Predo", "nota": 1},
+      ],
     }
   ];
 
@@ -47,7 +62,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
             ? Questionario(
                 perguntas: _perguntas,
                 perguntaSelecionada: _perguntaSelecionada,
-                quandoResponder: _responder)
+                quandoResponder: _responder,
+              )
             : Resultado(),
       ),
     );
