@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './questao.dart';
 import './resposta.dart';
+import './resultado.dart';
 
 void main(List<String> args) {
   runApp(PerguntaApp());
@@ -54,12 +55,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
                   ...respostas!.map((t) => Resposta(t, _responder)),
                 ],
               )
-            : const Center(
-                child: Text(
-                  "Parabens!!!",
-                  style: TextStyle(fontSize: 28),
-                ),
-              ),
+            : Resultado(),
       ),
     );
   }
