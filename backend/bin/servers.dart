@@ -31,6 +31,6 @@ class Servers {
       // senao lanca uma exception
     });
 
-    return router;
+    return router.call;
   }
 }
